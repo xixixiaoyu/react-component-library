@@ -7,7 +7,6 @@ function getAllDays(date: Dayjs) {
 	const startDate = date.startOf('month')
 	// 获取当月第一天是星期几（0-6，0 表示星期日）
 	const day = startDate.day()
-	console.log(day)
 
 	// 创建一个包含 6 周（42 天）的数组
 	// 这样可以确保日历总是显示完整的 6 行，无论当月有多少天
@@ -74,8 +73,6 @@ function MonthCalendar(props: CalendarProps) {
 
 	// 获取所有日期信息，包括上个月、当前月和下个月的日期
 	const allDays = getAllDays(props.value)
-
-	console.log(allDays, props.value) // 输出日期信息和传入的日期值，用于调试
 
 	return (
 		<div className="calendar-month">
